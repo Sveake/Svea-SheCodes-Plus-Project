@@ -16,63 +16,69 @@
   </head>
   <body>
     <div class="container">
-      <form id="searchCity" autocomplete="off">
-        <input
-          type="text"
-          id="yourCity"
-          placeholder="Search for your city here"
-        />
-
-        <input type="submit" id="submitCity" value="Search" />
-      </form>
-      <span>
-        <button type="submit" class="currentLocation">
-          Current location
-        </button>
-      </span>
-      <br />
-      <h1>Tallinn</h1>
-      <ul class="place">
-        <li>Estonia</li>
-        <li id="day">Today</li>
-        <li id="time">Time</li>
-      </ul>
-      <p>🌧</p>
-      <span id="currentTemp">15°</span>
-      <span class="units">
-        <span class="units">C</span>
-      </span>
-
-      <div class="popular">Popular cities</div>
-      <ul class="cities">
-        <li class="popular cities">Tartu</li>
-        <li class="popular cities">New York</li>
-        <li class="popular cities">Stockholm</li>
-      </ul>
-      <div class="forecast">5 day forecast for your city</div>
-      <ul class="days">
-        <li>
-          ☀️ Monday <br />
-          <span>15 C</span>
-        </li>
-        <li>
-          🌥 Tuesday<br />
-          <span>13 C</span>
-        </li>
-        <li>
-          ❄️ Wednesday<br />
-          <span>13 C</span>
-        </li>
-        <li>
-          🌙 Thursday<br />
-          <span>11 C</span>
-        </li>
-        <li>
-          🌤 Friday<br />
-          <span>11 C</span>
-        </li>
-      </ul>
-      <div class="me">Coded by Svea Lillepalu. Check out the <a href="https://github.com/Sveake/Svea-SheCodes-Plus-Project" target="_blank">GitHub Repository</a></div>
+        <div class="row">
+            <div class="col-8"><form id="searchCity" autocomplete="off">
+                <input
+                  type="text"
+                  id="yourCity"
+                  placeholder="Search for your city here"
+                />
+        
+                <input type="submit" id="submitCity" value="Search" />
+              </form>
+              <span>
+                <button type="submit" class="currentLocation">
+                  Current location
+                </button>
+              </span>
+              <br />
+              <h1>Tallinn</h1>
+              <ul class="place">
+                <li>Estonia</li>
+                <li id="day">Today</li>
+                <li id="time">Time</li>
+              </ul>
+              <p>🌧</p>
+              <span id="currentTemp">15°</span>
+              <span class="units">
+                <span class="units">C</span>
+              </span>
+        
+              <div class="popular">Popular cities</div>
+              <ul class="cities">
+                <li class="popular cities">Tartu</li>
+                <li class="popular cities">New York</li>
+                <li class="popular cities">Stockholm</li>
+              </ul>
+            </div>
+            <div class="col-4"><div class="forecast">5 day forecast for your city</div>
+            <ul class="days">
+              <li>
+                ☀️ Monday <br />
+                <span>15 C</span>
+              </li>
+              <li>
+                🌥 Tuesday<br />
+                <span>13 C</span>
+              </li>
+              <li>
+                ❄️ Wednesday<br />
+                <span>13 C</span>
+              </li>
+              <li>
+                🌙 Thursday<br />
+                <span>11 C</span>
+              </li>
+              <li>
+                🌤 Friday<br />
+                <span>11 C</span>
+              </li>
+            </ul>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-10"><span class="me">Coded by Svea Lillepalu. Check out the <a href="https://github.com/Sveake/Svea-SheCodes-Plus-Project" target="_blank">GitHub Repository</a></span></div>
+        </div>
     </div>
     <script src="src/script.js"></script>
   </body>
