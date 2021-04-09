@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="searchCity" autocomplete="off">
+        <input
+          type="text"
+          id="yourCity"
+          placeholder="Search for your city here"
+        />
+
+        <input type="submit" id="submitCity" value="Search" />
+      </form>
+      <span>
+        <button type="submit" class="currentLocation">
+          Current location
+        </button>
+      </span>
+      <br />
+      <h1>Tallinn</h1>
+      <ul class="place">
+        <li>Estonia</li>
+        <li id="day">Today</li>
+        <li id="time">Time</li>
+      </ul>
+      <p>🌧</p>
+      <span id="currentTemp">15°</span>
+      <span class="units">
+        <span class="units">C</span>
+      </span>
+
+      <div class="popular">Popular cities</div>
+      <ul class="cities">
+        <li class="popular cities">Tartu</li>
+        <li class="popular cities">New York</li>
+        <li class="popular cities">Stockholm</li>
+      </ul>
+      <div class="forecast">5 day forecast for your city</div>
+      <ul class="days">
+        <li>
+          ☀️ Monday <br />
+          <span>15 C</span>
+        </li>
+        <li>
+          🌥 Tuesday<br />
+          <span>13 C</span>
+        </li>
+        <li>
+          ❄️ Wednesday<br />
+          <span>13 C</span>
+        </li>
+        <li>
+          🌙 Thursday<br />
+          <span>11 C</span>
+        </li>
+        <li>
+          🌤 Friday<br />
+          <span>11 C</span>
+        </li>
+      </ul>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
