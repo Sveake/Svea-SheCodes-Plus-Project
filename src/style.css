@@ -46,14 +46,24 @@ body {
 .container {
   background: lightgoldenrodyellow;
   width: 1000px;
-  border: 2px solid #003366;
+  border: 10px solid #003366;
+  border-radius: 20px;
+  margin-top: 40px;
+  padding: 0px 25px 20px 25px;
 }
 
 .cities {
   padding: 0;
 }
 
-.popular.cities {
+.popular {
+  font-size: 20px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+
+.popular-cities {
   list-style: none;
   display: inline-block;
   font-size: 25px;
@@ -74,7 +84,7 @@ body {
   list-style: none;
   right: 500px;
   top: 30px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .units {
@@ -88,6 +98,6 @@ body {
 }
 
 .me {
-  font-size: 20px;
+  font-size: 15px;
   color:#003366;
 }
