@@ -16,71 +16,99 @@
   </head>
   <body>
     <div class="container">
-        <div class="row">
-            <div class="col-8"><form id="searchCity" autocomplete="off">
-                <input
-                  type="text"
-                  id="yourCity"
-                  placeholder="Search for your city here"
-                />
-        
-                <input type="submit" id="submitCity" value="Search" />
-              </form>
-              <span>
-                <button type="submit" class="currentLocation">
-                  Current location
-                </button>
-              </span>
-              <br />
-              <h1>Tallinn</h1>
-              <ul class="place">
-                <li>Estonia</li>
-                <li id="day">Today</li>
-                <li id="time">Time</li>
-              </ul>
-              <p>🌧</p>
-              <span id="currentTemp">15°</span>
-              <span class="units">
-                <span class="units">C</span>
-              </span>
-        
-              <div class="popular">Popular cities</div>
-              <ul class="cities">
-                <li class="popular-cities">Tartu</li>
-                <li class="popular-cities">New York</li>
-                <li class="popular-cities">Stockholm</li>
-              </ul>
+      <div class="row">
+          <div class="col-8">
+            <form id="searchCity" autocomplete="off">
+              <input
+                type="text"
+                id="yourCity"
+                placeholder="Search for your city here"
+              />
+              <input type="submit" id="submitCity" value="Search" />
+            </form>
+              <button type="submit" class="currentLocation">
+                Current location
+              </button>
+              <div class="row">
+                <div class="col-6">
+                  <h1>Tallinn</h1>
+                  <ul class="place">
+                  <li>Updated <span id="day">today</span></li>
+                </ul></div>
+              </div>
+              <div class="row">
+                <div class="col-2">
+                  <span>
+                   <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather" class="weatherIcon" id="weather-icon" /> 
+                  </span>
+                <br />
             </div>
-            <div class="col-4">
-              <div class="forecast">5 day forecast for your city</div>
-            <ul class="days">
-              <li>
-                ☀️ Monday <br />
-                <span>15 C</span>
-              </li>
-              <li>
-                🌥 Tuesday<br />
-                <span>13 C</span>
-              </li>
-              <li>
-                ❄️ Wednesday<br />
-                <span>13 C</span>
-              </li>
-              <li>
-                🌙 Thursday<br />
-                <span>11 C</span>
-              </li>
-              <li>
-                🌤 Friday<br />
-                <span>11 C</span>
-              </li>
-            </ul>
+                <div class="col-6">
+                  <span id="currentTemp">15</span>
+                  <span>
+                    <a href="#" id="convertCelsius" class="active">°C</a> | 
+                    <a href="#" id="convertFahrenheit">F</a>
+                    <div id="after-temp">
+                      <span id="weather-description">Clear</span> <br />
+                      <span>Humidity: </span>
+                      <span id="humidity">0%</span>
+                      <br />
+                      <span>Wind speed: </span>
+                      <span id="wind">0 km/h</span>
+                    </div>
+                  </span></div>
+              </div>
+            </div>
+          <div class="col-4">
+            <div class="row">
+              <div class="col-12">
+                <div class="forecast">5 day forecast for your city</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <span id="forecast-emoji">☀️</span>
+                <span id="forecast-day">Monday</span>
+              </div>
+              <div class="col-4" id="forecast-temp">15 C</div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <span id="forecast-emoji">☀️</span>
+                <span id="forecast-day">Monday</span>
+              </div>
+              <div class="col-4" id="forecast-temp">15 C</div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <span id="forecast-emoji">☀️</span>
+                <span id="forecast-day">Monday</span>
+              </div>
+              <div class="col-4" id="forecast-temp">15 C</div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <span id="forecast-emoji">☀️</span>
+                <span id="forecast-day">Monday</span>
+              </div>
+              <div class="col-4" id="forecast-temp">15 C</div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+                <span id="forecast-emoji">☀️</span>
+                <span id="forecast-day">Monday</span>
+              </div>
+              <div class="col-4" id="forecast-temp">15 C</div>
+            </div>
         </div>
-        </div>
-        <div class="row">
-            <div class="col-10"><span class="me">Coded by Svea Lillepalu. Check out the <a href="https://github.com/Sveake/Svea-SheCodes-Plus-Project" target="_blank">GitHub Repository</a></span></div>
-        </div>
-    </div>
-    <script src="src/script.js"></script>
-  </body>
+      </div>
+      <div class="row" id="about-me">
+          <div class="col-10">
+            <span class="me">Coded by Svea Lillepalu. Check out the <a href="https://github.com/Sveake/Svea-SheCodes-Plus-Project" target="_blank">GitHub Repository</a>
+            </span>
+          </div>
+      </div>
+  </div>
+  <script src="src/script.js"></script>
+</body>
 </html>
