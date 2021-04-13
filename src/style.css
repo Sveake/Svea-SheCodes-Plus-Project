@@ -14,16 +14,6 @@ h2 {
   font-weight: lighter;
 }
 
-p {
-  font-size: 150px;
-  text-align: left;
-  padding: 0;
-}
-
-span {
-  font-size: 19px;
-  font-weight: 300;
-}
 
 button {
   font-size: 15px;
@@ -37,6 +27,19 @@ body {
   background: lightcyan;
 }
 
+img.weatherIcon {
+  width: 100px;
+  background: rgb(73, 170, 170);
+  border: 2px solid #003366;
+  border-radius: 10px;
+}
+
+a.active {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+
 .place {
   list-style: none;
   padding-left: 0px;
@@ -44,26 +47,16 @@ body {
 }
 
 .container {
-  background: lightgoldenrodyellow;
+  background: rgb(243, 243, 239);
   width: 1000px;
-  border: 10px solid #003366;
-  border-radius: 20px;
-  margin-top: 40px;
-  padding: 0px 25px 20px 25px;
+  border: 2px solid #003366;
 }
 
 .cities {
   padding: 0;
 }
 
-.popular {
-  font-size: 20px;
-  margin-top: 10px;
-  text-decoration: underline;
-}
-
-
-.popular-cities {
+.popular.cities {
   list-style: none;
   display: inline-block;
   font-size: 25px;
@@ -74,22 +67,17 @@ body {
 .forecast {
   right: 500px;
   top: 20px;
-  padding-top: 10px;
-  margin-left: 50px;
 }
 
 .days {
-  padding-top: 10px;
-  margin-left: 30px;
+  margin: 10px;
+  padding: 0 10px;
   list-style: none;
   right: 500px;
   top: 30px;
-  font-size: 25px;
+  font-size: 30px;
 }
 
-.units {
-  font-weight: bold;
-}
 
 #currentTemp {
   color: blueviolet;
@@ -97,7 +85,12 @@ body {
   font-weight: bold;
 }
 
-.me {
-  font-size: 15px;
+#about-me {
+  padding-top: 15px;
+  font-size: 20px;
   color:#003366;
+}
+
+#after-temp {
+  font-size: 15px;
 }
