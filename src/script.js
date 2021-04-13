@@ -37,7 +37,7 @@
     let weatherDescription = document.querySelector("#weather-description");
     weatherDescription.innerHTML = response.data.weather[0].main;
     let weatherIcon = document.querySelector("#weather-icon");
-    weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     let destinationTime = document.querySelector("#day")
     destinationTime.innerHTML = formatDate(response.data.dt * 1000);
   }
@@ -101,7 +101,7 @@
       let weatherDescription = document.querySelector("#weather-description");
       weatherDescription.innerHTML = response.data.weather[0].main;
       let weatherIcon = document.querySelector("#weather-icon");
-      weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+      weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
       let destinationTime = document.querySelector("#day")
       destinationTime.innerHTML = formatDate(response.data.dt * 1000);
     }
