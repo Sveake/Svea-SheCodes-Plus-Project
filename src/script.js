@@ -141,20 +141,32 @@
       let forecast = response.data.daily;
 
       let forecastElement = document.querySelector("#weather-forecast");
-      
+      forecastHTML = "";
       
       forecast.forEach(function(forecastDay) {
-
       forecastHTML = forecastHTML + `
       <div class="row">
       <div class="col-8">
-        <span class="forecast-emoji">☀️</span>
-        <span class="forecast-day">${forecastDay.dt}</span>
+        <span class="forecast-emoji">
+        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+        alt=""
+        width="35"
+        />
+        </span>
+        <span class="forecast-day">${formatDay(forecastDay.dt)}</span>
       </div>
       <div class="col-4"> 
-      <span id="forecast-temp">${forecastDay.temp.day}</span>
+      <span id="forecast-temp">${Math.round(forecastDay.temp.day)}°</span>
       </div>
     </div>`;
   })
       forecastElement.innerHTML = forecastHTML;
+
+      function formatDay (timestamp) {
+        let date = new Date(timestamp * 1000);
+        let day = date.getDay();
+        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        return days[day];
+
+      }
     }
