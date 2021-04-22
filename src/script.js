@@ -24,6 +24,9 @@
     return `${day} | ${hours}:${minutes}`;
   }
   
+
+
+
   function getWeather(response) {
     let temperature = document.querySelector("#currentTemp");
     celsiusTemperature = response.data.main.temp;
@@ -125,4 +128,24 @@
   
     // forecast
   
-    
+    function displayForecast() {
+      let forecastElement = document.querySelector("#weather-forecast");
+      let forecastHTML = "";
+      let days = ["Thu", "Fri", "Sat", "Sun"];
+      days.forEach(function (day) {
+
+      forecastHTML = forecastHTML + `
+      <div class="row">
+      <div class="col-8">
+        <span class="forecast-emoji">☀️</span>
+        <span class="forecast-day">${day}</span>
+      </div>
+      <div class="col-4"> 
+      <span id="forecast-temp">15° </span>
+      </div>
+    </div>`;
+  })
+      forecastElement.innerHTML = forecastHTML;
+    }
+
+    displayForecast();
