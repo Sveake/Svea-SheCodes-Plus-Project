@@ -143,7 +143,8 @@
       let forecastElement = document.querySelector("#weather-forecast");
       forecastHTML = "";
       
-      forecast.forEach(function(forecastDay) {
+      forecast.forEach(function(forecastDay, index) {
+        if (index < 6) {
       forecastHTML = forecastHTML + `
       <div class="row">
       <div class="col-8">
@@ -159,6 +160,7 @@
       <span id="forecast-temp">${Math.round(forecastDay.temp.day)}°</span>
       </div>
     </div>`;
+  }
   })
       forecastElement.innerHTML = forecastHTML;
 
@@ -172,3 +174,55 @@
     }
 
     // current location forecast
+
+    function showLocTemp(response) {
+      let forecast = response.data.daily;
+
+      let forecastElement = document.querySelector("#weather-forecast");
+      forecastHTML = "";
+      
+      forecast.forEach(function(forecastDay, index) {
+        if (index < 6) {
+      forecastHTML = forecastHTML + `
+      <div class="row">
+      <div class="col-8">
+        <span class="forecast-emoji">
+        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+        alt=""
+        width="35"
+        />
+        </span>
+        <span class="forecast-day">${formatDay(forecastDay.dt)}</span>
+      </div>
+      <div class="col-4"> 
+      <span id="forecast-temp">${Math.round(forecastDay.temp.day)}°</span>
+      </div>
+    </div>`;
+  }
+  })
+      forecastElement.innerHTML = forecastHTML;
+
+      function formatDay (timestamp) {
+        let date = new Date(timestamp * 1000);
+        let day = date.getDay();
+        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        return days[day];
+
+      }
+    }
+
+function getLocationWeather (position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = "9aef592de78a13851ffe5a565ea13c5f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?units=metric&lat=${lat}&lon=${lon}&appid=${apiKey}`;
+    axios.get(apiUrl).then(showLocTemp);
+  }
+
+function getCurrentLoc (event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(getLocationWeather);
+}
+
+    let locationButton = document.querySelector("button")
+    locationButton.addEventListener("click", getCurrentLoc); 
