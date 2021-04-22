@@ -3,12 +3,12 @@ form {
 }
 
 h1 {
-  color: red;
+  color: #046ABE;
   margin-top: 10px;
 }
 
 h2 {
-  color: blue;
+  color:#046ABE;
   font-size: 15px;
   margin: 0 auto;
   font-weight: lighter;
@@ -24,7 +24,7 @@ button {
 }
 
 body {
-  background: lightcyan;
+  background-image: url("https://images.unsplash.com/photo-1464290109611-fe29ef5669c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80");
 }
 
 img.weatherIcon {
@@ -43,17 +43,16 @@ a.active {
 .place {
   list-style: none;
   padding-left: 0px;
-  color: blue;
+  color: #046ABE;
 }
 
 .container {
-  background: rgb(243, 243, 239);
+  background: #E0E8EB;
   width: 1000px;
-  border: 2px solid #003366;
-}
-
-.cities {
-  padding: 0;
+  border: 20px solid #046ABE;
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin-top: 40px;
 }
 
 .popular.cities {
@@ -67,6 +66,8 @@ a.active {
 .forecast {
   right: 500px;
   top: 20px;
+  font-size: 22px;
+  color: #046ABE;
 }
 
 .days {
@@ -78,17 +79,32 @@ a.active {
   font-size: 30px;
 }
 
-
-#currentTemp {
-  color: blueviolet;
-  font-size: 40px;
-  font-weight: bold;
+#weather-description {
+  padding-left: 10px;
 }
 
+.weather-humidity {
+  padding-left: 10px;
+}
+
+.weather-wind {
+  padding-left: 10px;
+}
+
+
+#currentTemp {
+  color: #222222;
+  font-size: 40px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+
 #about-me {
-  padding-top: 15px;
-  font-size: 20px;
+  padding-top: 50px;
+  font-size: 10px;
   color:#003366;
+  text-align: left;
 }
 
 #after-temp {
