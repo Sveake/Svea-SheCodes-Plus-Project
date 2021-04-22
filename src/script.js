@@ -170,3 +170,5 @@
 
       }
     }
+
+    // current location forecast

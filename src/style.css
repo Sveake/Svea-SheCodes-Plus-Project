@@ -17,22 +17,17 @@ h2 {
 
 button {
   font-size: 15px;
-  background: yellow;
-  border: 2px solid #003366;
-  color: #000000;
+  background: #F4DFB0;
+  border: 2px solid #8086A8;
+  color: #046ABE;
   border-radius: 10px;
+  padding: 5px 15px;
 }
 
 body {
   background-image: url("https://images.unsplash.com/photo-1464290109611-fe29ef5669c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80");
 }
 
-img.weatherIcon {
-  width: 100px;
-  background: rgb(73, 170, 170);
-  border: 2px solid #003366;
-  border-radius: 10px;
-}
 
 a.active {
   text-decoration: none;
@@ -70,13 +65,9 @@ a.active {
   color: #046ABE;
 }
 
-.days {
-  margin: 10px;
-  padding: 0 10px;
-  list-style: none;
-  right: 500px;
-  top: 30px;
-  font-size: 30px;
+#weather-forecast {
+  font-size: 20px;
+  color: #000;
 }
 
 #weather-description {
