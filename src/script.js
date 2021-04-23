@@ -109,7 +109,7 @@
       weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
       let destinationTime = document.querySelector("#day")
       destinationTime.innerHTML = formatDate(response.data.dt * 1000);
-      
+    
     }
     
     function getCurrent(position) {
@@ -118,6 +118,8 @@
       let apiKeyPos = "9aef592de78a13851ffe5a565ea13c5f";
       let apiUrlPos = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=${apiKeyPos}`;
       axios.get(apiUrlPos).then(showTemp);
+      getLocationWeather(position);
+      
     }
     
     function getLocation(event) {
@@ -219,10 +221,10 @@ function getLocationWeather (position) {
     axios.get(apiUrl).then(showLocTemp);
   }
 
-function getCurrentLoc (event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(getLocationWeather);
-}
+// function getCurrentLoc (event) {
+  // event.preventDefault();
+  // navigator.geolocation.getCurrentPosition(getLocationWeather);
+// }
 
-    let locationButton = document.querySelector("button")
-    locationButton.addEventListener("click", getCurrentLoc); 
+    // let locationButton = document.querySelector("button")
+    //locationButton.addEventListener("click", getCurrentLoc); 
